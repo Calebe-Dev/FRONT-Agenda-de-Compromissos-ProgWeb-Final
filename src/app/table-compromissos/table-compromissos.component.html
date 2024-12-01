@@ -1,1 +1,38 @@
-<p>table-compromissos works!</p>
+<div class="display-5">
+    <marquee> Cadastro de Compromissos </marquee>
+</div>
+<div class="container">
+    <button class="btn btn-primary"(click)="create()">Novo</button>
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Tiulo</th>
+              <th scope="col">Descrição</th>
+              <th scope="col">Dia</th>
+              <th scope="col">Inicio</th>
+              <th scope="col">Fim</th>
+              <th scope="col">Local</th>
+              <th scope="col">Status</th>
+              <th scope="col">Prioridade</th>
+              <th scope="col">Ação</th>
+            </tr>
+          </thead>
+          <tbody >
+            <tr *ngFor="let Compromisso of Compromissos">
+              <th>{{Compromisso.id}}</th>
+              <th><a [routerLink]="['/compromissos',Compromisso.id]">{{Compromisso.title}}</a></th>            
+              <th>{{Compromisso.compromissoDate}}</th>
+              <th>{{Compromisso.description}}</th>
+              <th>{{Compromisso.startTime}}</th>
+              <th>{{Compromisso.endTime}}</th>
+              <th>{{Compromisso.local}}</th>
+              <th>{{Compromisso.compromissoStatus}}</th>
+              <th>{{Compromisso.priority}}</th>
+              <td><button class="btn btn-danger" (click)="delete(Compromisso)">Remover</button></td>
+  
+            </tr>
+          </tbody>
+        </table>
+  
+  </div>
