@@ -1,1 +1,42 @@
-<p>form-compromissos works!</p>
+<div class="container">
+    <h1>Cadastro de Compromissos</h1>
+  
+    <form [formGroup] = "formGroupCompromissos">
+        <div class="mb-3">
+            <label for="title" class="form-label">Titulo</label>
+            <input formControlName="title" type="text" class="form-control" id="title" placeholder="Defina um titulo para o compromissso">
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Descrição</label>
+          <input formControlName="description" type="text" class="form-control" id="description" placeholder="Defina uma Descrição para o compromissso">
+        </div>
+        <div class="mb-3">
+          <label for="compromissoDate" class="form-label">Data</label>
+          <input formControlName="compromissoDate" type="date" class="form-control" id="compromissoDate">
+        </div>
+        <div class="mb-3">
+          <label for="startTime" class="form-label">Inicio</label>
+          <input formControlName="startTime" type="datetime" class="form-control" id="startTime" placeholder="Defina o horario de inicio">
+        </div>
+        <div class="mb-3">
+          <label for="endTime" class="form-label">Fim</label>
+          <input formControlName="endTime" type="datetime" class="form-control" id="endTime" placeholder="Defina o horario previsto para o final">
+        </div>
+        <div class="mb-3">
+          <label for="local" class="form-label">Local</label>
+          <input formControlName="local" type="text" class="form-control" id="local" placeholder="Onde vai ser?">
+        </div>
+        <div class="mb-3">
+            <label for="compromissoStatus" class="form-label">Local</label>
+            <input formControlName="compromissoStatus" type="text" class="form-control" id="compromissoStatus" placeholder="Qual o status">
+          </div>
+        <div class="mb-3">
+          <label for="priority" class="form-label">Prioridade</label>
+          <input formControlName="priority" type="number" class="form-control" id="priority" placeholder="defina o grau de prioridade">
+        </div>
+        <button (click)="update()" *ngIf="isEditing">Editar
+        </button>
+        <button (click)="save()" *ngIf="!isEditing">Salvar</button>
+
+    </form>
+  </div>

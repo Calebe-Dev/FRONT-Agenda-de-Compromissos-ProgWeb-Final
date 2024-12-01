@@ -8,6 +8,7 @@ import { HomeAgendaComponent } from './home-agenda/home-agenda.component';
 import { NavbarAgendaComponent } from './navbar-agenda/navbar-agenda.component';
 import { TableCompromissosComponent } from './table-compromissos/table-compromissos.component';
 import { FormCompromissosComponent } from './form-compromissos/form-compromissos.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormCompromissosComponent } from './form-compromissos/form-compromissos
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     NgbModule
   ],
   providers: [
