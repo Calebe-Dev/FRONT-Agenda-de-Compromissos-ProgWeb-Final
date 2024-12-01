@@ -6,5 +6,6 @@ export interface compromissos {
     startTime:string;
     endTime:string;
     local:string;
+    compromissoStatus:string;
     priority:number; 
   }
