@@ -9,6 +9,8 @@ import { NavbarAgendaComponent } from './navbar-agenda/navbar-agenda.component';
 import { TableCompromissosComponent } from './table-compromissos/table-compromissos.component';
 import { FormCompromissosComponent } from './form-compromissos/form-compromissos.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
