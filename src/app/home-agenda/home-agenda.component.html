@@ -1,5 +1,15 @@
 <div class="container">
+        <div class="card" *ngFor="let Compromisso of Compromissos">
+        <div class="card__title"><h5>{{Compromisso.title}}</h5>   data: {{Compromisso.compromissoDate}}</div>
+        <div class="card__data">
+            <div class="card__right">
+            <div class="item">inicio: {{Compromisso.startTime}}</div>
+            <div class="item">fim: {{Compromisso.endTime}}</div>
+            <div class="item">local: {{Compromisso.local}}</div>
+            <div class="item">status: {{Compromisso.compromissoStatus}}</div>
+            <div class="item">prioridade: {{Compromisso.priority}}</div>
+            </div>
 
-    
-
+        </div>
+        </div>
 </div>
