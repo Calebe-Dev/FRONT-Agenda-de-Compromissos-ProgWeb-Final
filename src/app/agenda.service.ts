@@ -8,7 +8,8 @@ import { compromissos } from './compromissos';
 })
 export class AgendaService {
 
-  url='http://localhost:8080/Compromisso';
+  //  url='http://localhost:8080/Compromisso';
+  url='http://52.70.141.1:8080/Compromisso';
 
   constructor(private http:HttpClient) { }
 
